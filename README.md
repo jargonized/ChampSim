@@ -13,7 +13,18 @@ ChampSim is the result of academic research. To support its continued growth, pl
 
 # Download dependencies
 
-ChampSim uses [vcpkg](https://vcpkg.io) to manage its dependencies. In this repository, vcpkg is included as a submodule. You can download the dependencies with
+ChampSim uses [vcpkg](https://vcpkg.io) to manage its dependencies. In this repository, vcpkg is included as a submodule. 
+
+Enter sudo ($ sudo -i) mode before initiating the installation. vcpkg assumes that a C compiler is already installed in the machine. Running the below cmds will ensure smooth installation of ChampSim dependencies.
+
+```
+apt update
+apt upgrade
+apt install build-essential
+apt-get install pkg-config 
+```
+
+You can download the dependencies with
 ```
 git submodule update --init
 vcpkg/bootstrap-vcpkg.sh
